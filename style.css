@@ -1,0 +1,848 @@
+/* ==========================================================================
+   1. Imports & General Styles
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono:wght@400;700&family=Sacramento&display=swap');
+
+html {
+  font-size: 18px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Roboto Mono', monospace;
+  color: #333;
+  margin: 0;
+  text-align: center;
+  background-color: #f8f9fa;
+}
+
+/* Typography */
+h1 {
+  font-family: 'Sacramento', cursive;
+  color: #11999E;
+  font-size: 4rem;
+  margin: 2rem auto;
+}
+
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 2rem;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+}
+
+h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 3px;
+  background-color: #66BFBF;
+  transition: width 0.4s ease-in-out;
+}
+
+.section.visible h2::after {
+   width: 70%;
+}
+
+
+h3 {
+  font-family: 'Montserrat', sans-serif;
+  color: #66BFBF;
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+p, li {
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* ==========================================================================
+   2. Layout & Structure
+   ========================================================================== */
+
+.top-container {
+  background-color: #E4F9F5;
+  position: relative;
+  padding: 100px 20px;
+  overflow: hidden; /* Hide overflowing clouds */
+}
+
+.top-container .top-cloud {
+  position: absolute;
+  top: 90px;
+  right: 50px;
+  animation: drift 20s linear infinite alternate;
+  width: 150px;
+  opacity: 0.7;
+}
+
+.top-container .mountain-img {
+    position: relative;
+    bottom: -5px;
+}
+
+.section {
+  padding: 80px 20px;
+  background-color: #fff;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  margin-bottom: 20px;
+}
+
+.section:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ==========================================================================
+   3. Navigation Bar
+   ========================================================================== */
+
+.navbar {
+  background: linear-gradient(135deg, #11999E 0%, #66BFBF 100%);
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+  transform: translateY(-100%);
+  animation: navbarSlideIn 0.5s ease-out 0.5s forwards;
+}
+
+.navbar.solid {
+  background: #11999E;
+  box-shadow: 0 3px 20px rgba(0,0,0,0.2);
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.1);
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  animation: logo-pulse 3s ease-in-out infinite;
+}
+
+.navbar-brand:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+.navbar-brand i {
+  color: #fff;
+  font-size: 1.8rem;
+  margin-right: 0.8rem;
+  transition: all 0.3s ease;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.navbar-brand:hover i {
+  color: #66BFBF;
+  transform: rotate(15deg) scale(1.2);
+  text-shadow: 0 4px 8px rgba(17,153,158,0.3);
+}
+
+.navbar-brand span {
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  position: relative;
+  transition: all 0.3s ease;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.navbar-brand:hover span {
+  color: #E3F6F5;
+  letter-spacing: 1px;
+}
+
+.navbar-nav .nav-link {
+  position: relative;
+  color: rgba(255,255,255,0.9) !important;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.navbar-nav .nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover::after {
+  width: 100%;
+}
+
+/* ==========================================================================
+   4. Components
+   ========================================================================== */
+
+/* Profile Picture Flip */
+.profile-flip-container {
+    perspective: 1000px;
+    width: 250px;
+    height: 250px;
+    margin: 0 auto 1rem auto;
+    cursor: pointer;
+}
+
+.profile-flipper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.profile-flip-container.flipped .profile-flipper {
+    transform: rotateY(180deg);
+}
+
+.profile-front, .profile-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 50%;
+}
+
+.profile-back {
+    background: linear-gradient(135deg, #11999E 0%, #66BFBF 100%);
+    color: white;
+    transform: rotateY(180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 5rem;
+    font-weight: 700;
+    border: 4px solid #fff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.profile-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #11999E;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+
+/* Project Card */
+.project-card {
+  position: relative;
+  background: #fff;
+  border-radius: 15px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  height: 100%;
+  overflow: visible;
+  transform-style: preserve-3d;
+}
+
+.project-card:hover {
+  transform: translateY(-10px) scale(1.03) rotateY(-3deg);
+  box-shadow: 0 20px 40px rgba(17, 153, 158, 0.3);
+}
+
+.project-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(45deg, #11999E, #66BFBF);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 0;
+  border-radius: 15px;
+}
+
+.project-card:hover::before {
+  opacity: 0.1;
+}
+
+.project-card::after {
+    content: '';
+    position: absolute;
+    top: 5%;
+    right: -5px;
+    width: 8px;
+    height: 90%;
+    background: linear-gradient(to bottom, #66BFBF, #11999E);
+    transform: skewY(45deg);
+    border-radius: 4px;
+    z-index: -1;
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.project-card:hover::after {
+    opacity: 1;
+    transform: skewY(0) scaleY(1.05) translateX(5px) rotateZ(2deg);
+    box-shadow: -2px 2px 10px rgba(0,0,0,0.2);
+}
+
+.project-card-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* Special Project Card for Co-G App */
+.project-card-special {
+    background-image: linear-gradient(135deg, #4c1d95 0%, #2563eb 100%);
+    border: 1px solid #3b82f6;
+    border-radius: 0.75rem;
+}
+
+.project-card-special h3 {
+    color: #f8fafc;
+}
+
+.project-card-special p {
+    color: #cbd5e0;
+}
+
+.project-card-special .btn {
+    background: linear-gradient(90deg, #84cc16 0%, #14b8a6 100%);
+    box-shadow: 0 4px 15px rgba(132, 204, 22, 0.3);
+    border: none;
+}
+
+.project-card-special .btn:hover {
+    box-shadow: 0 8px 25px rgba(132, 204, 22, 0.4);
+}
+
+.project-card-special .btn-secondary {
+    background: transparent;
+    border: 1px solid #e2e8f0;
+    color: #e2e8f0;
+    margin-left: 10px;
+}
+
+.project-card-special .btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border-color: #fff;
+}
+
+.project-card-special:hover {
+    transform: translateY(-10px) scale(1.03);
+    border-color: #84cc16;
+    box-shadow: 0 20px 40px rgba(76, 29, 149, 0.3);
+}
+
+.project-card-special::after,
+.project-card-special::before {
+    display: none;
+}
+
+
+/* Button */
+.btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  background: linear-gradient(135deg, #11999E 0%, #66BFBF 100%);
+  color: #fff;
+  padding: 12px 32px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  box-shadow: 0 4px 15px rgba(17, 153, 158, 0.3);
+  border: none;
+  cursor: pointer;
+  transform-style: preserve-3d;
+}
+
+.btn:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(17, 153, 158, 0.5);
+  letter-spacing: 1px;
+}
+
+.btn::after {
+  content: '';
+  position: absolute;
+  top: -50%; left: -50%;
+  width: 200%; height: 200%;
+  background: linear-gradient(45deg, transparent 25%, rgba(255,255,255,0.1) 50%, transparent 75%);
+  transform: rotate(45deg);
+  animation: shimmer 4s infinite linear;
+  opacity: 0.3;
+}
+
+.btn:active::before {
+  content: '';
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 300px; height: 300px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  animation: ripple 0.6s ease-out;
+}
+
+.btn .icon {
+  margin-left: 10px;
+  transform: translateX(0);
+  transition: transform 0.3s ease;
+}
+
+.btn:hover .icon {
+  transform: translateX(5px);
+}
+
+/* Social Links */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.social-links a {
+  position: relative;
+  display: inline-flex;
+  color: #11999E;
+  font-size: 2.5rem;
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  transform-style: preserve-3d;
+  text-decoration: none;
+  padding: 0.5rem;
+  border-radius: 50%;
+  animation: float 3s ease-in-out infinite;
+}
+
+.social-links a:hover {
+  color: #66BFBF;
+  transform: translateY(-5px) scale(1.2);
+  text-shadow: 0 5px 15px rgba(17, 153, 158, 0.3);
+}
+
+.social-links a::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: radial-gradient(circle at 50% 50%, rgba(17, 153, 158, 0.1) 0%, rgba(17, 153, 158, 0) 70%);
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: -1;
+}
+
+.social-links a:hover::before {
+  opacity: 1;
+  transform: scale(1.8);
+}
+
+.social-links a::after {
+  content: attr(title);
+  position: absolute;
+  bottom: -30px; left: 50%;
+  transform: translateX(-50%);
+  background: #11999E;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  opacity: 0;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.social-links a:hover::after {
+  opacity: 1;
+  bottom: -25px;
+}
+
+.social-links a:nth-child(1) { animation-delay: 0.2s; transition-delay: 0.1s; }
+.social-links a:nth-child(2) { animation-delay: 0.4s; }
+.social-links a:nth-child(3) { animation-delay: 0.6s; }
+.social-links a:nth-child(4) { animation-delay: 0.8s; }
+
+.social-links a:nth-child(1):hover {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.social-links a:nth-child(2):hover { color: #333; }
+.social-links a:nth-child(3):hover { color: #0077b5; }
+.social-links a:nth-child(4):hover { color: #000; }
+
+/* Back to Top Button */
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #11999E;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 0.4s ease;
+  z-index: 1000;
+}
+
+.back-to-top.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  transform: scale(1.1) translateY(-5px);
+}
+
+/* ==========================================================================
+   5. Section-Specific Styles
+   ========================================================================== */
+
+/* About Section */
+.about-section {
+  padding: 3rem 0;
+}
+.about-table tbody tr {
+    transition: background-color 0.3s ease;
+}
+.about-table tbody tr:hover {
+    background-color: #e9f7f7;
+}
+
+/* Achievements Section */
+.achievements-section {
+  padding: 3rem 0;
+}
+
+.table {
+  border-color: #11999E;
+  font-size: 0.9rem;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.table th, .table td {
+  padding: 0.75rem;
+  vertical-align: middle;
+}
+
+.table thead th {
+  background-color: #11999E;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+}
+
+.table tbody tr:hover {
+  background-color: #e9f7f7;
+  transform: scale(1.02);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.platform strong {
+  color: #2c3e50;
+}
+
+/* Featured Work Slider */
+.featured-work-section {
+    overflow: hidden;
+    padding: 80px 0;
+}
+.slider-container {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    perspective: 1200px;
+    margin-top: 2rem;
+}
+
+.slider {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.slide {
+    position: absolute;
+    width: 380px;
+    height: 450px;
+    top: 10px;
+    left: 50%;
+    margin-left: -190px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    background: #fff;
+    transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1), opacity 0.6s ease;
+    display: flex;
+    flex-direction: column;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.slide img {
+    width: 100%;
+    height: 85%;
+    object-fit: cover;
+}
+
+.slide-caption {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    padding: 15px;
+    font-weight: 600;
+    color: #2c3e50;
+    background-color: #fff;
+    height: 15%;
+}
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    color: #11999E;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.slider-btn:hover {
+    background-color: #11999E;
+    color: #fff;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+/* ==========================================================================
+   6. Footer
+   ========================================================================== */
+
+.bottom-container {
+  background: linear-gradient(135deg, #11999E 0%, #66BFBF 100%);
+  padding: 30px 0;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+
+.bottom-container:hover {
+  box-shadow: 0 -5px 25px rgba(17,153,158,0.3);
+}
+
+.bottom-container::before {
+  content: '';
+  position: absolute;
+  top: -50%; left: -50%;
+  width: 200%; height: 200%;
+  background: linear-gradient(45deg, transparent 25%, rgba(255,255,255,0.1) 50%, transparent 75%);
+  transform: rotate(45deg);
+  animation: footerShimmer 6s infinite linear;
+  z-index: 0;
+}
+
+.bottom-container p {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.bottom-container p:hover {
+  transform: scale(1.05);
+  text-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 15px;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.footer-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #fff;
+  transition: width 0.3s ease;
+}
+
+.footer-links a:hover::after {
+  width: 100%;
+}
+
+/* ==========================================================================
+   7. Animations & Keyframes
+   ========================================================================== */
+@keyframes drift {
+    from { transform: translateX(-50px); }
+    to { transform: translateX(50px); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes rotateBorder {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%) rotate(45deg); }
+  100% { transform: translateX(100%) rotate(45deg); }
+}
+
+@keyframes ripple {
+  from { transform: translate(-50%, -50%) scale(0); opacity: 1; }
+  to { transform: translate(-50%, -50%) scale(2); opacity: 0; }
+}
+
+@keyframes footerShimmer {
+  0% { transform: translateX(-100%) rotate(45deg); }
+  100% { transform: translateX(100%) rotate(45deg); }
+}
+
+@keyframes navbarSlideIn {
+  to { transform: translateY(0); }
+}
+
+@keyframes logo-pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+}
+
+/* ==========================================================================
+   8. Media Queries & Responsive Design
+   ========================================================================== */
+
+@media (max-width: 992px) {
+    .slide {
+        width: 280px;
+        height: 360px;
+        margin-left: -140px;
+    }
+}
+
+@media (max-width: 768px) {
+  h1 { font-size: 3rem; }
+  h2 { font-size: 2rem; }
+  p, li { font-size: 1rem; }
+
+  .profile-flip-container {
+    width: 200px;
+    height: 200px;
+  }
+  .profile-back {
+    font-size: 4rem;
+  }
+
+  .mountain-img {
+    width: 100%;
+    height: auto;
+  }
+  .navbar {
+    padding: 0.25rem 0.5rem;
+  }
+  .navbar-nav .nav-link {
+    font-size: 0.8rem;
+  }
+  .slider-container {
+    height: 400px;
+  }
+  .slide {
+    width: 220px;
+    height: 300px;
+    margin-left: -110px;
+  }
+   .slider-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+  .prev-btn { left: 0; }
+  .next-btn { right: 0; }
+}
+
+@media (max-width: 576px) {
+  .table {
+    font-size: 0.8rem;
+  }
+  .table th, .table td {
+    padding: 0.5rem;
+  }
+  .slider-container {
+    height: 350px;
+  }
+   .slide {
+    width: 200px;
+    height: 270px;
+    margin-left: -100px;
+  }
+}

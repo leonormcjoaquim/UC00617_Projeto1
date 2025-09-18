@@ -1,4 +1,4 @@
-## Rizwan Shah | Personal Portfolio
+## Leonor Joaquim | Personal Portfolio
 
 Welcome to my Personal Portfolio Website! This project showcases my professional profile, skills, projects, and contact information, now with enhanced animations and interactive elements.
 

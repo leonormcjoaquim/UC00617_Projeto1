@@ -1,24 +1,24 @@
-## Leonor Joaquim | Personal Portfolio
+# Leonor Joaquim | Personal Portfolio
 
-Welcome to my Personal Portfolio Website! This project showcases my professional profile, skills, projects, and contact information, now with enhanced animations and interactive elements.
+Welcome to my Personal Portfolio Website!
+This project highlights my professional profile, skills, projects, and contact information — now featuring enhanced animations and interactive elements.
 
-### ✨ Live Preview
+## ✨ Live Preview
 
-[https://rizwanshah9792.github.io/Portfolio/](https://rizwanshah9792.github.io/Portfolio/)
+<!-- Missing the live preview bit, have to work on the deployment-->
 
-### 🛠️ Built With
+## 🛠️ Built With
 
 * **HTML5** – Structuring the content
 * **CSS3** – Styling with advanced animations, transitions, and responsive design
 * **JavaScript** – Frontend interactivity, including a 3D slider and dynamic effects
 * **Bootstrap 5** – Responsive and mobile-first layout
 * **Libraries:**
-
   * Typed.js
   * FontAwesome
   * Google Fonts
 
-### 📋 Features
+## 📋 Features
 
 #### 🎨 Modern Design
 
@@ -44,7 +44,7 @@ Welcome to my Personal Portfolio Website! This project showcases my professional
 
 * An engaging way to showcase my featured photography work.
 
-#### 📂 Showcases
+### 📂 Showcases
 
 * Profile section with interactive elements.
 * Projects with descriptions and GitHub links.
@@ -52,7 +52,7 @@ Welcome to my Personal Portfolio Website! This project showcases my professional
 * Certifications & Achievements.
 * Social Media links with tooltips.
 
-### 📂 Folder Structure
+## 📂 Folder Structure
 
 ```
 |-- index.html       # Main HTML file
@@ -61,7 +61,7 @@ Welcome to my Personal Portfolio Website! This project showcases my professional
 |-- images/          # Images used for profile, projects, and featured work
 ```
 
-### 🧐 How to Run Locally
+## 🧐 How to Run Locally
 
 1. Clone the repository:
 
@@ -76,7 +76,7 @@ Welcome to my Personal Portfolio Website! This project showcases my professional
 3. Open `index.html` directly in your browser. No server is required to view the site.
 4. *(Optional)* Customize styles and scripts by editing `style.css` and `script.js`.
 
-### 📧 Contact Me
+## 📧 Contact Me
 
 * **Email:** [shahrizwan@example.com](mailto:shahrizwan@example.com)
 * **GitHub:** [rizwanshah9792](https://github.com/rizwanshah9792)
@@ -84,10 +84,10 @@ Welcome to my Personal Portfolio Website! This project showcases my professional
 * **Instagram:** [@r.shah\_1.0](https://www.instagram.com/r.shah_1.0/)
 * **Twitter (X):** [@Rizwanshah9792](https://x.com/Rizwanshah9792)
 
-### 📜 License
+## 📜 License
 
 This project is licensed under the MIT License - feel free to use and modify it for your own purposes.
 
 ---
 
-**Designed and Developed by Rizwan Shah ✨**
+**Designed and Developed by Leonor Joaquim ✨**

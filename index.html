@@ -1,250 +1,281 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Leonor Joaquim | Portfolio</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Sacramento&family=Roboto+Mono&display=swap" rel="stylesheet"/>
-    <!-- Font Awesome library for icons-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
-    <!-- Bootstrap links-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <!-- CSS stylesheet links-->
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="dark-theme.css" id="dark-theme" disabled />
-    <!-- typed.js for typing animation-->
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Leonor Joaquim | Portfolio</title>
 
-  <body>
-    <!-- Navbar-->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Sacramento&family=Roboto+Mono&display=swap"
+    rel="stylesheet" />
+  <!-- Font Awesome library for icons-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <!-- Bootstrap links-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- CSS stylesheet links-->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="dark-theme.css" id="dark-theme" disabled />
+  <!-- typed.js for typing animation-->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+</head>
+
+<body>
+  <!-- Navbar-->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <i class="fas fa-laptop-code me-2"></i>
+        <span>Leonor Joaquim</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#profile">Profile</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#achievements">C&A</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item">
+            <button id="theme-toggle" type="button" title="Toggle theme" class="btn btn-sm ms-2"><i
+                class="fas fa-moon"></i></button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="top-container">
+    <img class="top-cloud" src="images/cloud.png" alt="cloud-img" />
+    <h1>Hi, I'm Leonor</h1>
+    <h2><span id="typed-text"></span></h2>
+    <img class="mountain-img" src="images/mountain.png" alt="mountain-img" />
+  </div>
+
+  <main class="middle-container">
+    <section id="profile" class="section">
       <div class="container">
-        <a class="navbar-brand" href="#">
-          <i class="fas fa-laptop-code me-2"></i>
-          <span>Leonor Joaquim</span>
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link" href="#profile">Profile</a></li>
-            <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-            <li class="nav-item"><a class="nav-link" href="#achievements">C&A</a></li>
-            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-            <li class="nav-item">
-              <button id="theme-toggle" type="button" title="Toggle theme" class="btn btn-sm ms-2"><i class="fas fa-moon"></i></button>
-            </li>
-          </ul>
+        <div class="profile-flip-container">
+          <div class="profile-flipper">
+            <div class="profile-front">
+              <img class="profile-img" src="images/leonor.jpg" alt="Leonor Joaquim Profile Picture" />
+            </div>
+            <div class="profile-back">
+              <img class="profile-img" src="images/bitmoji_leonor.png" alt="Leonor Joaquim Profile Picture">
+            </div>
+          </div>
         </div>
       </div>
-    </nav>
+      <h2>Hello.</h2>
+      <p class="intro">
+        Hello! I'm Leonor, a law graduate and current student with a strong passion for web development.
+        I'm especially interested in full-stack development, combining both front-end and back-end technologies.
+      </p>
+      </div>
+    </section>
 
-    <div class="top-container">
-      <img class="top-cloud" src="images/cloud.png" alt="cloud-img" />
-      <h1>Hi, I'm Leonor</h1>
-      <h2><span id="typed-text"></span></h2>
-      <img class="mountain-img" src="images/mountain.png" alt="mountain-img" />
+    <section id="projects" class="section">
+      <div class="container">
+        <h2>My Projects</h2>
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+          <!-- New Special Project Card -->
+          <div class="col">
+            <div class="project-card project-card-special">
+              <div class="project-card-content">
+                <h3>Co-G App (Digital Wellbeing)</h3>
+                <p>A modern web app with React and Tailwind CSS to help manage smartphone addiction. Deployed on Vercel.
+                </p>
+                <a class="btn" href="https://co-g-app.vercel.app/" target="_blank" rel="noopener">Visit Site</a>
+                <a class="btn btn-secondary" href="https://github.com/rizwanshah9792/Co-G-App" target="_blank"
+                  rel="noopener">GitHub Repo</a>
+              </div>
+            </div>
+          </div>
+          <!-- Existing Project Cards -->
+          <div class="col">
+            <div class="project-card">
+              <div class="project-card-content">
+                <h3>Web Technologies Project</h3>
+                <p>A collection of projects demonstrating proficiency in various web technologies, including HTML, CSS,
+                  JavaScript, and Bootstrap.</p>
+                <a class="btn" href="https://github.com/rizwanshah9792/Web-Technologies" target="_blank"
+                  rel="noopener">GitHub Repo</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="project-card">
+              <div class="project-card-content">
+                <h3>Pattern Recognition</h3>
+                <p>Exploring the world of machine learning with projects on neural networks and data analysis using
+                  Python.</p>
+                <a class="btn" href="https://github.com/rizwanshah9792/Pattern-Recognition" target="_blank"
+                  rel="noopener">GitHub Repo</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="project-card">
+              <div class="project-card-content">
+                <h3>Operating Systems</h3>
+                <p>Implementations of fundamental operating system concepts like process creation, inter-process
+                  communication, and client-server models.</p>
+                <a class="btn" href="https://github.com/rizwanshah9792/Operating-Systems" target="_blank"
+                  rel="noopener">GitHub Repo</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="project-card">
+              <div class="project-card-content">
+                <h3>DBMS</h3>
+                <p>A variety of SQL database projects showcasing database design and management skills for different
+                  applications.</p>
+                <a class="btn" href="https://github.com/rizwanshah9792/DBMS-Projects-assignments" target="_blank"
+                  rel="noopener">GitHub Repo</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about-section">
+      <div class="container">
+        <h2>About Me</h2>
+        <p class="intro">Hello! I'm Leonor, a passionate web developer with a strong foundation in front-end
+          technologies and a curiosity for back-end development.</p>
+        <table class="table about-table">
+          <tbody>
+            <tr>
+              <td class="skills">
+                <strong>Languages:</strong> HTML, CSS, JavaScript, Python, C, C++,PHP, React
+              </td>
+            </tr>
+            <tr>
+              <td class="skills">
+                <strong>Tools:</strong> Git, VSCode, M365
+              </td>
+            </tr>
+            <tr>
+              <td class="skills">
+                <strong>Photography:</strong> Photography, Video Editing
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="achievements" class="achievements-section">
+      <div class="container">
+        <h2>Certification and Achievements</h2>
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th scope="col">Platform</th>
+              <th scope="col">Achievement</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="platform"><strong>Google</strong></td>
+              <td>Technical Support Fundamentals Certification</td>
+            </tr>
+            <tr>
+              <td class="platform"><strong>FEA</strong></td>
+              <td>Master Teacher & Team Leadership Certificate</td>
+            </tr>
+            <tr>
+              <td class="platform"><strong>University of Michigan</strong></td>
+              <td>Python Data Structures Certification</td>
+            </tr>
+            <tr>
+              <td class="platform"><strong>Udemy</strong></td>
+              <td>Web Development Bootcamp Completion</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="featured-work-section section" id="featured-work">
+      <div class="container">
+        <h2>Featured Work</h2>
+        <div class="slider-container">
+          <div class="slider">
+            <div class="slide">
+              <img src="images/f0.jpg" alt="Takla Pahaar"
+                onerror="this.src='https://placehold.co/400x400/2c3e50/ffffff?text=Image+Error';">
+              <div class="slide-caption">Takla Pahaar</div>
+            </div>
+            <div class="slide">
+              <img src="images/f3.jpg" alt="Tea Garden"
+                onerror="this.src='https://placehold.co/400x400/2c3e50/ffffff?text=Image+Error';">
+              <div class="slide-caption">Tea Garden</div>
+            </div>
+            <div class="slide">
+              <img src="images/f2.jpg" alt="Tezpur Town"
+                onerror="this.src='https://placehold.co/400x400/2c3e50/ffffff?text=Image+Error';">
+              <div class="slide-caption">Tezpur Town</div>
+            </div>
+            <div class="slide">
+              <img src="images/f1.jpg" alt="Sessa"
+                onerror="this.src='https://placehold.co/400x400/2c3e50/ffffff?text=Image+Error';">
+              <div class="slide-caption">Sessa</div>
+            </div>
+            <div class="slide">
+              <img src="images/f4.jpg" alt="TU Niribhili"
+                onerror="this.src='https://placehold.co/400x400/2c3e50/ffffff?text=Image+Error';">
+              <div class="slide-caption">TU Niribhili</div>
+            </div>
+            <div class="slide">
+              <img src="images/f5.jpg" alt="Jiya Bareli"
+                onerror="this.src='https://placehold.co/400x400/2c3e50/ffffff?text=Image+Error';">
+              <div class="slide-caption">Jiya Bareli</div>
+            </div>
+          </div>
+          <button type="button" title="Previous image" class="slider-btn prev-btn"><i
+              class="fas fa-chevron-left"></i></button>
+          <button type="button" title="Next image" class="slider-btn next-btn"><i
+              class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <h2>Get In Touch</h2>
+        <p><a class="btn" href="mailto:your-email@example.com"><i class="fas fa-envelope"></i> Email Me</a></p>
+        <div class="social-links">
+          <a href="https://www.instagram.com/r.shah_1.0/" target="_blank" rel="noopener" title="Instagram Profile"><i
+              class="fab fa-instagram"></i></a>
+          <a href="https://github.com/rizwanshah9792" target="_blank" rel="noopener" title="GitHub Profile"><i
+              class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/rizwan-shah-574851166/" target="_blank" rel="noopener"
+            title="LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
+          <a href="https://x.com/Rizwanshah9792" target="_blank" rel="noopener" title="X Profile"><i
+              class="fab fa-x"></i></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="bottom-container">
+    <div class="footer-links">
+      <a href="#contact">Contact</a>
     </div>
-
-    <main class="middle-container">
-      <section id="profile" class="section">
-        <div class="container">
-          <div class="profile-flip-container">
-            <div class="profile-flipper">
-              <div class="profile-front">
-                <img class="profile-img" src="images/bitmoji_leonor.png" alt="Leonor Joaquim Profile Picture" />
-              </div>
-              <div class="profile-back">
-                <div class="profile-img" src="images/bitmoji_leonor.png" alt=""></div>
-              </div>
-            </div>
-          </div>
-          <h2>Hello.</h2>
-          <p class="intro">
-            Hello! I'm Leonor, a passionate web developer and recent graduate of Tezpur University. I specialize in front-end technologies and have a strong foundation in back-end development.
-          </p>
-        </div>
-      </section>
-
-      <section id="projects" class="section">
-        <div class="container">
-          <h2>My Projects</h2>
-          <div class="row row-cols-1 row-cols-md-2 g-4">
-            <!-- New Special Project Card -->
-            <div class="col">
-              <div class="project-card project-card-special">
-                <div class="project-card-content">
-                  <h3>Co-G App (Digital Wellbeing)</h3>
-                  <p>A modern web app with React and Tailwind CSS to help manage smartphone addiction. Deployed on Vercel.</p>
-                  <a class="btn" href="https://co-g-app.vercel.app/" target="_blank" rel="noopener">Visit Site</a>
-                  <a class="btn btn-secondary" href="https://github.com/rizwanshah9792/Co-G-App" target="_blank" rel="noopener">GitHub Repo</a>
-                </div>
-              </div>
-            </div>
-            <!-- Existing Project Cards -->
-            <div class="col">
-              <div class="project-card">
-                <div class="project-card-content">
-                  <h3>Web Technologies Project</h3>
-                  <p>A collection of projects demonstrating proficiency in various web technologies, including HTML, CSS, JavaScript, and Bootstrap.</p>
-                  <a class="btn" href="https://github.com/rizwanshah9792/Web-Technologies" target="_blank" rel="noopener">GitHub Repo</a>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="project-card">
-                <div class="project-card-content">
-                  <h3>Pattern Recognition</h3>
-                  <p>Exploring the world of machine learning with projects on neural networks and data analysis using Python.</p>
-                  <a class="btn" href="https://github.com/rizwanshah9792/Pattern-Recognition" target="_blank" rel="noopener">GitHub Repo</a>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="project-card">
-                <div class="project-card-content">
-                  <h3>Operating Systems</h3>
-                  <p>Implementations of fundamental operating system concepts like process creation, inter-process communication, and client-server models.</p>
-                  <a class="btn" href="https://github.com/rizwanshah9792/Operating-Systems" target="_blank" rel="noopener">GitHub Repo</a>
-                </div>
-              </div>
-            </div>
-             <div class="col">
-              <div class="project-card">
-                <div class="project-card-content">
-                  <h3>DBMS</h3>
-                  <p>A variety of SQL database projects showcasing database design and management skills for different applications.</p>
-                  <a class="btn" href="https://github.com/rizwanshah9792/DBMS-Projects-assignments" target="_blank" rel="noopener">GitHub Repo</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="about" class="about-section">
-        <div class="container">
-          <h2>About Me</h2>
-          <p class="intro">Hello! I'm Leonor, a passionate web developer with a strong foundation in front-end technologies and a curiosity for back-end development.</p>
-          <table class="table about-table">
-            <tbody>
-                <tr>
-                    <td class="skills">
-                      <strong>Languages:</strong> HTML, CSS, JavaScript, Python, C, C++,PHP, React
-                    </td>
-                </tr>
-                <tr>
-                    <td class="skills">
-                      <strong>Tools:</strong> Git, VSCode, M365
-                    </td>
-                </tr>
-                <tr>
-                    <td class="skills">
-                      <strong>Photography:</strong> Photography, Video Editing
-                    </td>
-                </tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
-
-      <section id="achievements" class="achievements-section">
-        <div class="container">
-          <h2>Certification and Achievements</h2>
-          <table class="table table-bordered">
-            <thead>
-              <tr>
-                <th scope="col">Platform</th>
-                <th scope="col">Achievement</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="platform"><strong>Google</strong></td>
-                <td>Technical Support Fundamentals Certification</td>
-              </tr>
-              <tr>
-                <td class="platform"><strong>FEA</strong></td>
-                <td>Master Teacher & Team Leadership Certificate</td>
-              </tr>
-              <tr>
-                <td class="platform"><strong>University of Michigan</strong></td>
-                <td>Python Data Structures Certification</td>
-              </tr>
-              <tr>
-                <td class="platform"><strong>Udemy</strong></td>
-                <td>Web Development Bootcamp Completion</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
-
-      <section class="featured-work-section section" id="featured-work">
-        <div class="container">
-          <h2>Featured Work</h2>
-          <div class="slider-container">
-            <div class="slider">
-              <div class="slide">
-                <img src="images/f0.jpg" alt="Takla Pahaar" onerror="this.src='https://placehold.co/400x400/2c3e50/ffffff?text=Image+Error';">
-                <div class="slide-caption">Takla Pahaar</div>
-              </div>
-              <div class="slide">
-                <img src="images/f3.jpg" alt="Tea Garden" onerror="this.src='https://placehold.co/400x400/2c3e50/ffffff?text=Image+Error';">
-                 <div class="slide-caption">Tea Garden</div>
-              </div>
-              <div class="slide">
-                <img src="images/f2.jpg" alt="Tezpur Town" onerror="this.src='https://placehold.co/400x400/2c3e50/ffffff?text=Image+Error';">
-                 <div class="slide-caption">Tezpur Town</div>
-              </div>
-              <div class="slide">
-                <img src="images/f1.jpg" alt="Sessa" onerror="this.src='https://placehold.co/400x400/2c3e50/ffffff?text=Image+Error';">
-                 <div class="slide-caption">Sessa</div>
-              </div>
-              <div class="slide">
-                <img src="images/f4.jpg" alt="TU Niribhili" onerror="this.src='https://placehold.co/400x400/2c3e50/ffffff?text=Image+Error';">
-                 <div class="slide-caption">TU Niribhili</div>
-              </div>
-              <div class="slide">
-                <img src="images/f5.jpg" alt="Jiya Bareli" onerror="this.src='https://placehold.co/400x400/2c3e50/ffffff?text=Image+Error';">
-                 <div class="slide-caption">Jiya Bareli</div>
-              </div>
-            </div>
-            <button type="button" title="Previous image" class="slider-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
-            <button type="button" title="Next image" class="slider-btn next-btn"><i class="fas fa-chevron-right"></i></button>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact" class="section">
-        <div class="container">
-          <h2>Get In Touch</h2>
-          <p><a class="btn" href="mailto:your-email@example.com"><i class="fas fa-envelope"></i> Email Me</a></p>
-          <div class="social-links">
-            <a href="https://www.instagram.com/r.shah_1.0/" target="_blank" rel="noopener" title="Instagram Profile"><i class="fab fa-instagram"></i></a>
-            <a href="https://github.com/rizwanshah9792" target="_blank" rel="noopener" title="GitHub Profile"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/rizwan-shah-574851166/" target="_blank" rel="noopener" title="LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
-            <a href="https://x.com/Rizwanshah9792" target="_blank" rel="noopener" title="X Profile"><i class="fab fa-x"></i></a>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <div class="bottom-container">
-      <div class="footer-links">
-        <a href="#contact">Contact</a>
-      </div>
-      <p>© 2025 Leonor Joaquim. All Rights Reserved</p>
-      <div class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
-        <i class="fas fa-arrow-up"></i>
-      </div>
+    <p>© 2025 Leonor Joaquim. All Rights Reserved</p>
+    <div class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+      <i class="fas fa-arrow-up"></i>
     </div>
+  </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script>
-  </body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
 </html>

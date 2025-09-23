@@ -19,7 +19,7 @@ body {
 
 /* Typography */
 h1 {
-  font-family: 'Sacramento', cursive;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #11999E;
   font-size: 4rem;
   margin: 2rem auto;

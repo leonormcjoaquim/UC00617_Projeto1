@@ -1,10 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+  // For the typing effect in the beginning and the strings it shows
   const initTypedJs = () => {
     const typedElement = document.querySelector("#typed-text");
     if (typedElement) {
       new Typed("#typed-text", {
-        strings: ["I'm a TUian", "A Web Developer", "A Problem Solver", "A Tech Lover"],
+        strings: ["A Web Developer", "A Problem Solver", "Full-Stack"],
         typeSpeed: 60,
         backSpeed: 30,
         loop: true
@@ -12,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
+  // to make "sections" visible when they show on screen
   const initScrollAnimations = () => {
     const sections = document.querySelectorAll('.section');
     if (sections.length > 0) {
@@ -32,6 +34,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
+
+  // to add the class "solid" to the navbar
   const initNavbarEffect = () => {
     const navbar = document.querySelector('.navbar');
     if (navbar) {
@@ -45,6 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
+  // button to return to the top of the page
   const initBackToTopButton = () => {
     const backToTopButton = document.querySelector('.back-to-top');
     if (backToTopButton) {
@@ -58,6 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
+  // to toggle the class "flipped" when clicked and to change the profile picture
   const initProfileFlip = () => {
       const flipper = document.querySelector('.profile-flip-container');
       if(flipper) {
@@ -67,6 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
   };
 
+  // fot the carroussel slider
   const initFeaturedSlider = () => {
     const sliderContainer = document.querySelector('.slider-container');
     if (!sliderContainer) return;
@@ -141,6 +148,7 @@ document.addEventListener('DOMContentLoaded', () => {
     updateSlider();
   };
 
+  // to change between light and dark mode
   const initThemeSwitcher = () => {
     const themeToggle = document.getElementById('theme-toggle');
     const darkTheme = document.getElementById('dark-theme');
@@ -173,6 +181,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   };
 
+  // initializes every function above
   const init = () => {
     initTypedJs();
     initScrollAnimations();

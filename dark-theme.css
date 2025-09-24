@@ -144,6 +144,11 @@ p, li {
 
 .platform strong {
     color: #e2e8f0;
+    font-weight: bolder;
+}
+
+td {
+    color:#e2e8f0;
 }
 
 .work-item img {

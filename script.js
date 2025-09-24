@@ -4,9 +4,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const typedElement = document.querySelector("#typed-text");
     if (typedElement) {
       new Typed("#typed-text", {
-        strings: ["I'm a TUian", "A Web Developer", "A Problem Solver", "A Tech Lover"],
-        typeSpeed: 60,
-        backSpeed: 30,
+        strings: ["A Web Developer", "A Problem Solver", "A Tech Lover", "A Constant Learner"],
+        typeSpeed: 80,
+        backSpeed: 40,
         loop: true
       });
     }

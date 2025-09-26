@@ -67,8 +67,17 @@ It is built to experiment with HTML, CSS, JavaScript, and external libraries lik
 
 
 ## 📸 Demo (Screenshots)
+Profile 
+![Profile Screenshot](images/Screenshot_Profile.png)
+---
 
-<!-- Colocar screenshots aqui-->
+My Projects
+![My Projects Screenshot](images/Screenshot_My_Projects.png)
+---
+
+Certifications and Achievements 
+![Achievements Screenshot](images/Screenshot_Certifications.png)
+---
 
 ## 📧 Contact Me
 - **Email:** [leonor@example.com](mailto:leonor@example.com)

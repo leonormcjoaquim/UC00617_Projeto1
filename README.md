@@ -1,93 +1,80 @@
-# Leonor Joaquim | Personal Portfolio
+# 🌐 Portfolio - Leonor Joaquim
 
-Welcome to my Personal Portfolio Website!
-This project highlights my professional profile, skills, projects, and contact information — now featuring enhanced animations and interactive elements.
+This project is a school portfolio website created as part of my learning journey to practice working with Git and GitHub.
+It is built to experiment with HTML, CSS, JavaScript, and external libraries like Bootstrap and Typed.js, while implementing features such as responsiveness, animations, theme switching for light/dark mode, interactive components, and project showcases.
+
+---
+
+## 🚀 Features
+
+- **Responsive navigation** with a dynamic navbar.
+- **Typing animation effect** (using Typed.js library).
+- **Scroll animations**
+- **Light/Dark theme toggle**
+- **Interactive profile image** with a coin flip effect.
+- **3D carousel slider** for main projects I've built.
+- **Smooth "Back to Top" button** with animation.
+- **Interactive project cards** with hover effects.
+- **Dedicated sections**:
+  - Profile
+  - Projects
+  - About Me
+  - Certifications & Achievements
+  - Featured Work
+  - Contact & Social Media
+
+---
 
 ## ✨ Live Preview
 
-<!-- Missing the live preview bit, have to work on the deployment-->
+<!-- Colocar link Preview aqui-->
 
-## 🛠️ Built With
+## 🛠️ Technologies Used
 
-* **HTML5** – Structuring the content
-* **CSS3** – Styling with advanced animations, transitions, and responsive design
-* **JavaScript** – Frontend interactivity, including a 3D slider and dynamic effects
-* **Bootstrap 5** – Responsive and mobile-first layout
-* **Libraries:**
-  * Typed.js
-  * FontAwesome
-  * Google Fonts
+- **Frontend:**
+  - HTML5
+  - CSS3
+  - Bootstrap 5
+  - JavaScript ES6+
 
-## 📋 Features
+- **External libraries:**
+  - [Font Awesome](https://fontawesome.com/) → icons
+  - [Typed.js](https://github.com/mattboldt/typed.js/) → typing animation
+  - [Google Fonts](https://fonts.google.com/) → typography
 
-#### 🎨 Modern Design
+---
 
-* A clean and attractive interface with a professional color palette.
+## 📂 Project Structure
 
-#### 🌟 Advanced Animations
-
-* Flipping profile picture on click.
-* 3D slim strip effect on project cards.
-* Smooth section transitions on scroll.
-* Hover effects on all interactive elements.
-
-#### 🔥 Dynamic Content
-
-* Typing animation for my professional titles.
-* Animated background with drifting clouds.
-
-#### 📱 Fully Responsive
-
-* Mobile-friendly design for a seamless experience on any device.
-
-#### 🖼️ Interactive 3D Slider
-
-* An engaging way to showcase my featured photography work.
-
-### 📂 Showcases
-
-* Profile section with interactive elements.
-* Projects with descriptions and GitHub links.
-* About Me section detailing my skills.
-* Certifications & Achievements.
-* Social Media links with tooltips.
-
-## 📂 Folder Structure
-
-```
-|-- index.html       # Main HTML file
-|-- style.css        # Custom styles for the portfolio
-|-- script.js        # JavaScript for animations and interactions
-|-- images/          # Images used for profile, projects, and featured work
+```bash
+.
+├── index.html        # Main structure of the site
+├── style.css         # Main styles (light theme)
+├── dark-theme.css    # Dark mode styles
+├── script.js         # Logic and interactivity
+├── images/           # Portfolio images
 ```
 
-## 🧐 How to Run Locally
+## ⚙️ How to Run Locally
 
 1. Clone the repository:
 
-   ```bash
-   git clone https://github.com/rizwanshah9792/Portfolio.git
-   ```
-2. Navigate to the project folder:
+```bash
+   git clone https://github.com/leonormcjoaquim/UC00617_Projeto1
+```
 
-   ```bash
-   cd Portfolio
-   ```
-3. Open `index.html` directly in your browser. No server is required to view the site.
-4. *(Optional)* Customize styles and scripts by editing `style.css` and `script.js`.
+2. Open the **index.html** file directly in your browser, or run it with Live Server (VSCode extension).
+
+
+## 📸 Demo (Screenshots)
+
+<!-- Colocar screenshots aqui-->
 
 ## 📧 Contact Me
-
-* **Email:** [shahrizwan@example.com](mailto:shahrizwan@example.com)
-* **GitHub:** [rizwanshah9792](https://github.com/rizwanshah9792)
-* **LinkedIn:** [Rizwan Shah](https://www.linkedin.com/in/rizwan-shah-574851166/)
-* **Instagram:** [@r.shah\_1.0](https://www.instagram.com/r.shah_1.0/)
-* **Twitter (X):** [@Rizwanshah9792](https://x.com/Rizwanshah9792)
+- **Email:** [leonor@example.com](mailto:leonor@example.com)
+- **GitHub**: [leonormcjoaquim](https://github.com/leonormcjoaquim)
+- **LinkedIn:** [Leonor Joaquim](https://www.linkedin.com/feed)
 
 ## 📜 License
 
 This project is licensed under the MIT License - feel free to use and modify it for your own purposes.
-
----
-
-**Designed and Developed by Leonor Joaquim ✨**

@@ -26,8 +26,9 @@ It is built to experiment with HTML, CSS, JavaScript, and external libraries lik
 ---
 
 ## ✨ Live Preview
+In case you wanna check it live with github pages 🚀 Everytime I push into main, it automatically updates the website into the new version.
 
-<!-- Colocar link Preview aqui-->
+https://leonormcjoaquim.github.io/UC00617_Projeto1/ 
 
 ## 🛠️ Technologies Used
 
@@ -40,14 +41,13 @@ It is built to experiment with HTML, CSS, JavaScript, and external libraries lik
 - **External libraries:**
   - [Font Awesome](https://fontawesome.com/) → icons
   - [Typed.js](https://github.com/mattboldt/typed.js/) → typing animation
-  - [Google Fonts](https://fonts.google.com/) → typography
+  - [Google Fonts](https://fonts.google.com/) → fonts for the typography
 
 ---
 
 ## 📂 Project Structure
 
 ```bash
-.
 ├── index.html        # Main structure of the site
 ├── style.css         # Main styles (light theme)
 ├── dark-theme.css    # Dark mode styles
@@ -63,7 +63,9 @@ It is built to experiment with HTML, CSS, JavaScript, and external libraries lik
    git clone https://github.com/leonormcjoaquim/UC00617_Projeto1
 ```
 
-2. Open the **index.html** file directly in your browser, or run it with Live Server (VSCode extension).
+2. Make your way into the Portfolio directory, either on windows or CD into it. 
+
+3. Open the **index.html** file directly in your browser, or run it with Live Server (VSCode extension).
 
 
 ## 📸 Demo (Screenshots)

@@ -5,7 +5,7 @@ It is built to experiment with HTML, CSS, JavaScript, and external libraries lik
 
 ## 🧠 The Idea and Why I Chose this Portfolio
 For school, we were asked to clone a public portolio and change it to be our own portfolio. The catch being that we 
-weren't being evaluated on how the portfolio looked and the technoligies we used, but rather on how we used git to 
+weren't being evaluated on how the portfolio looked and the technologies we used, but rather on how we used git to 
 make our changes and the different branches and commits we did in order to make the portfolio our own.
 
 I chose this portfolio mainly because I understood the languages and frameworks being used, and was able to learn new ones

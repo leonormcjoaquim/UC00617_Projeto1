@@ -107,3 +107,7 @@ Certifications and Achievements
 ## 📜 License
 
 This project is licensed under the MIT License - feel free to use and modify it for your own purposes.
+
+## 🙌 Thanks to:
+
+Many thanks to [rizwanshah9792](https://github.com/rizwanshah9792) for having a public portfolio and allowing myself to clone and use it 🙌

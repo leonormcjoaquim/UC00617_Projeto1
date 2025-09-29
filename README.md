@@ -3,6 +3,24 @@
 This project is a school portfolio website created as part of my learning journey to practice working with Git and GitHub.
 It is built to experiment with HTML, CSS, JavaScript, and external libraries like Bootstrap and Typed.js, while implementing features such as responsiveness, animations, theme switching for light/dark mode, interactive components, and project showcases.
 
+## 🧠 The Idea and Why I Chose this Portfolio
+For school, we were asked to clone a public portolio and change it to be our own portfolio. The catch being that we 
+weren't being evaluated on how the portfolio looked and the technoligies we used, but rather on how we used git to 
+make our changes and the different branches and commits we did in order to make the portfolio our own.
+
+I chose this portfolio mainly because I understood the languages and frameworks being used, and was able to learn new ones
+such as **Font Awesome** and **Typed.js**.
+
+Since the project had mainly three files, namely: 
+- `index.html`  
+- `style.css` (including the dark mode version)  
+- `script.js`  
+
+The **idea** was to create a dedicated branch for each of these files, and within those branches, the commits would have 
+meaningful messages on what was actually changed - following the [Conventional Commit Messages](https://gist.github.com/qoomon/5dfcdf8eec66a051ecd85625518cfd13).
+
+For that reason, all major changes were done in `feat/*` branches, while smaller, ongoing fixes to the documentation were handled in `docs/*` branches.  
+
 ---
 
 ## 🚀 Features
